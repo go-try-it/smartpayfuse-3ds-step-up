@@ -15,7 +15,7 @@ The following steps comprise the Microform step of a transaction:
    
 3. **Use the Transient Token**: pass the transient token representing the cardholder details to your service and make API calls to progress a transaction using the token. Use the transient token to make standard REST API calls to Smartpay Fuse 
 
-## simpleflex.html
+## Using the simpleflex.html example
 This is a simple one-page example showing how to use the Capture Context that you generated from your back-end (step 1), see the [go-try-it.com Smartpay Fuse Postman Collection example](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116). 
 
 Steps to use this sample:
