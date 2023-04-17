@@ -26,9 +26,8 @@ Steps to use this sample:
 1. Clone this repo 
 2. Set-up your webserver to serve `simpleflex.html`; either on your own cloud based hosting, or via a local webserver on `localhost`.
 3. Use the go-try-it.com [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform Capture Context JWT
-   1. Note 1: be sure to update `targetOrigins` in your version of `simpleflex.html` to match the full path URL where you host the page
-   2. Note 2: the URL scheme can *only* be `http` for `localhost`, if hosting `simpleflex.html` somewhere other than `localhost` then you *must* use `https`
-4. Clone this repo
+   1. Note 1: be sure to update `targetOrigins` in your [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request so that it matches the origin of `simpleflex.html`.
+   2. Note 2: the URL scheme can only be `http` if you are serving `simpleflex.html` from `localhost`. If you are hosting `simpleflex.html` somewhere other than `localhost` then you *must* use `https`
 5. Take Capture Context JTW returned from [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) and update the initialisation value of `captureContext` in `simpleflex.html` with the Capture Context JWT 
    
 ```
