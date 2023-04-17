@@ -1,15 +1,14 @@
-## GO-TRY-IT.COM - Smartpay Fuse evaluation
+## GO-TRY-IT.COM - Smartpay Fuse Flex Microform Example
 The contents of this repo have been created by the team here at go-try-it.com as part of our ongoing exploration of different payment gateway capabilities. We are building our own knowledge at this point but will soon start to create articles and reviews across a wide range of payment service solutions.
 
 **Disclaimer**: The contents of this repo are provided 'as is' with no express or implied warranties, including the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the authors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to procurement of substitute goods or services; loss of use, data, or profits; or business interruption) sustained by you or a third party, however caused and on any theory of liability, whether in contract, strict liability, or tort arising in any way out of the use of this sample collection, even if advised of the possibility of such damage.
 
-## Smartpay Fuse - Flex Microform example
+## About Flex Microforms
 
 This repo contains a simple HTML page that uses the Smartpay Fuse Flex Microform SDK to tokenize a payment card. The resulting "Transient Token" can then be passed safely through your back-office systems and used in the Smartpay Fuse REST API to process a sale.  
 
 > IMPORTANT: a note on PCI: Handling plain cardholder data in your systems will bring you in to scope of significant PCI overheads (SAQ D requirement) so it is important to handle customer card details in a PCI safe way. The JWT transient token output of a Flex Microform integration can be safely passed through your back-office systems as it doesn't itself contain cardholder data, but merely represents it.  
 
-## About Flex Microforms
 Flex Microform is the [Smartpay Fuse hosted field solution](https://developer.smartpayfuse.barclaycard/barclays/quick-start-guides/hosted-fields.html). It allows you to temporarily tokenise card data, generating a *transient token* that can be used in Smartpay Fuse REST API payment processing calls.
 
 The following steps comprise the Microform step of a transaction:
@@ -26,7 +25,7 @@ This is a simple one-page example showing how to use the Capture Context that yo
 Steps to use this sample:
 
 1. Clone this repo 
-2. Set-up your webserver to serve `simpleflex.html`; either on your own cloud based hosting - or `localhost`.
+2. Set-up your webserver to serve `simpleflex.html`; either on your own cloud based hosting, or via a local webserver on `localhost`.
 3. Use the go-try-it.com [Create (v2) capture context] (https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform Capture Context JWT
    1. Note 1: be sure to update `targetOrigins` in your version of `simpleflex.html` to match the full path URL where you host the page
    2. Note 2: the URL scheme can *only* be `http` for `localhost`, if hosting `simpleflex.html` somewhere other than `localhost` then you *must* use `https`
