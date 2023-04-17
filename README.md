@@ -1,4 +1,9 @@
-# Smartpay Fuse - simple Flex Microform example
+## GO-TRY-IT.COM - Smartpay Fuse test collection
+The contents of this collection have been created by the team here at go-try-it.com as part of our ongoing exploration of different payment gateway capabilities. We are building our own knowledge at this point but will soon start to create articles and reviews across a wide range of payment service solutions.
+
+Disclaimer: This collection is provided 'as is' with no express or implied warranties, including the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the authors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to procurement of substitute goods or services; loss of use, data, or profits; or business interruption) sustained by you or a third party, however caused and on any theory of liability, whether in contract, strict liability, or tort arising in any way out of the use of this sample collection, even if advised of the possibility of such damage.
+
+## Smartpay Fuse - simple Flex Microform example
 
 This repo contains a simple HTML page that uses the Smartpay Fuse Flex Microform SDK to tokenize a payment card. The resulting "Transient Token" can then be passed safely through your back-office systems and used in the Smartpay Fuse REST API to process a sale.  
 
