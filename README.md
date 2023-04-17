@@ -25,17 +25,19 @@ Steps to use this sample:
 
 1. Clone this repo 
 2. Set-up your webserver to serve `simpleflex.html`; either on your own cloud based hosting, or via a local webserver on `localhost`.
-3. Use the go-try-it.com [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform Capture Context JWT
-   1. Note 1: be sure to update `targetOrigins` in your [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request so that it matches the origin of `simpleflex.html`.
-   2. Note 2: the URL scheme can only be `http` if you are serving `simpleflex.html` from `localhost`. If you are hosting `simpleflex.html` somewhere other than `localhost` then you *must* use `https`
-5. Take Capture Context JTW returned from [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) and update the initialisation value of `captureContext` in `simpleflex.html` with the Capture Context JWT 
+3. Use the go-try-it.com [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform *Capture Context* JWT.
+   1. Note 1: be sure to update `targetOrigins` in your request so that it matches the origin of `simpleflex.html`.
+   2. Note 2: the URL scheme can only be `http` if you are serving `simpleflex.html` from `localhost`. In all other cases you *must* use `https`.
+5. Take the *Capture Context* JTW returned from [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) and update the initialisation value of `captureContext` in `simpleflex.html` with the JWT.
    
 ```
 var captureContext = 'YOUR CAPTURE CONTEXT JWT GOES HERE';
 ```
 
-6. Deploy `simpleflex.html` to your hosting location
+6. Deploy the updated `simpleflex.html` to your hosting location
 7. Load the page in a browser
+8. Enter the payment form details 
+9. Click submit to generate and display the *Transient Token* 
 
 On clicking `submit`, all being well, the page will use the `<SCRIIPT>` referenced JavaScript library to tokenize the payment card details and generate a *Transient Token*. You can then use the Transient Token in any REST REQUEST.
 
