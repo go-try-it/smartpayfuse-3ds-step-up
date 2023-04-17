@@ -19,17 +19,17 @@ The following steps are required to generate a *Transient Token* and perform a t
 3. **Use the Transient Token**: pass the *Transient Token* representing the cardholder details to your service and make API calls to progress a transaction using the token. Use the *Transient Token* to make standard REST API calls to Smartpay Fuse 
 
 ## Using the simpleflex.html example
-This is a simple one-page example showing how to use the Capture Context that you generated from your back-end (step 1), see the [go-try-it.com Smartpay Fuse Postman Collection example](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116). 
+This is a simple one-page example showing how to use the Capture Context that you generated from your back-end (step 1), see the go-try-it.com [Smartpay Fuse Postman Collection example](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116). 
 
 Steps to use this sample:
 
 1. Clone this repo 
 2. Set-up your webserver to serve `simpleflex.html`; either on your own cloud based hosting, or via a local webserver on `localhost`.
-3. Use the go-try-it.com [Create (v2) capture context] (https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform Capture Context JWT
+3. Use the go-try-it.com [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) request to create a Flex Microform Capture Context JWT
    1. Note 1: be sure to update `targetOrigins` in your version of `simpleflex.html` to match the full path URL where you host the page
    2. Note 2: the URL scheme can *only* be `http` for `localhost`, if hosting `simpleflex.html` somewhere other than `localhost` then you *must* use `https`
 4. Clone this repo
-5. Take Capture Context JTW returned from [Create (v2) capture context] (https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) and update the initialisation value of `captureContext` in `simpleflex.html` with the Capture Context JWT 
+5. Take Capture Context JTW returned from [Create (v2) capture context](https://documenter.getpostman.com/view/6354187/2s93RTRsZC#33ea5078-4bb3-43c8-b318-6ea0b2558116) and update the initialisation value of `captureContext` in `simpleflex.html` with the Capture Context JWT 
    
 ```
 var captureContext = 'YOUR CAPTURE CONTEXT JWT GOES HERE';
